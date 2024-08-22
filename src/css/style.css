@@ -13,6 +13,7 @@ body {
 .card-table {
     background-color: #fff;
     border-spacing: 0;
+    margin: 10px;
 }
 .card-table td,
 .card-table th {
@@ -21,4 +22,13 @@ body {
 }
 .card-table th {
     background-color: #ededed;
+}
+.discount {
+    border: 1px solid #819e7a;
+    padding: 4px 8px;
+    background-color: #a8d49d;
+}
+
+.hidden {
+    display: none;
 }
