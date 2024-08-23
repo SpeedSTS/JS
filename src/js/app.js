@@ -19,8 +19,9 @@ addItem(product2);
 
 // możliwośc dodawania zniżki
 
-function addDiscount() {
-    discountEnabled = window.event.target.checked;
+function addDiscount(e) {
+    console.log(e);
+    discountEnabled = e.target.checked;
     if(discount > 0) {
         document.querySelector('#discount-amount').innerHTML = discount;
         document.querySelector('#discount').classList.toggle('hidden'); //classList.toggle (toggle - odwróć)
@@ -37,3 +38,7 @@ function calculatePrice() {
 }
 
 calculatePrice();
+
+//listnery
+
+document.querySelector('#add-discount').addEventListener('click', addDiscount);
