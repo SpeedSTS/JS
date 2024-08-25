@@ -14,12 +14,20 @@ function addItem(item) {
                 <tr>
                 <td>${counter++}</td>
                 <td>${item.title}</td>
-                <td>1</td>
+                <td><input type="number" value="1"></td>
                 <td>${item.price}</td>
                 </tr>`
 }
 addItem(product1);
 addItem(product2);
+
+function markBg(e) {
+    if(e.target.tagName === "TD")
+    {
+        e.target.closest('tr').classList.toggle('marked'); //closest('name') - poszukiwanie najbliższego elementu o nazwie name
+    }
+    
+}
 
 // możliwośc dodawania zniżki
 
@@ -45,6 +53,7 @@ calculatePrice();
 //listnery
 
 discoutCheckBox.addEventListener('click', addDiscount);
+items.addEventListener('click', markBg);
 
 // zaznacz zniżkę na początku jeśli trzeba
 const discountShouldBeEnabled = +discountElement.dataset.discountShouldBeEnabled;
