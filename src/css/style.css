@@ -38,3 +38,11 @@ body {
 .marked {
     background-color: #e9d7bf;
 }
+.delete {
+    padding: 6px;
+    background: none;
+    border: 0;
+    font-size: 20px;
+    color: grey;
+    cursor: pointer;
+}
