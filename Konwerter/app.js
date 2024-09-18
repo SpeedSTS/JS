@@ -1,11 +1,14 @@
 // pobieranie elementów
 const item = document.querySelector('#check');
-console.log(item);
 
 // funkcje
-
 function checkBox(e) {
 
+    if(e.target.tagName === 'BUTTON')
+    {
+        e.target.classList.add('check');
+    }
+    
 }
 
 // podpięcie listenerów
